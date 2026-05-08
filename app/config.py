@@ -1,3 +1,5 @@
+# Common English "function words" filtered out before counting word frequency.
+# Without this, the top words would be "the", "a", "is", "to" — true but useless;
 STOPWORDS = {"the", "a", "an", "and", "or", "but", "is", "are", "was", "were",
              "be", "been", "being", "have", "has", "had", "do", "does", "did",
              "will", "would", "could", "should", "may", "might", "must", "can",
