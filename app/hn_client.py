@@ -2,10 +2,16 @@ import asyncio
 import httpx
 
 BASE_URL = "https://hacker-news.firebaseio.com/v0"
-SEMAPHORE = asyncio.Semaphore(50)
+_semaphore: asyncio.Semaphore | None = None
+
+def _get_semaphore() -> asyncio.Semaphore:
+    global _semaphore
+    if _semaphore is None:
+        _semaphore = asyncio.Semaphore(50)
+    return _semaphore
 
 async def fetch_item(client: httpx.AsyncClient, item_id: int) -> dict | None:
-    async with SEMAPHORE:
+    async with _get_semaphore():
         r = await client.get(f"{BASE_URL}/item/{item_id}.json")
         if r.status_code != 200:
             return None
