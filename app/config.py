@@ -1,0 +1,10 @@
+STOPWORDS = {"the", "a", "an", "and", "or", "but", "is", "are", "was", "were",
+             "be", "been", "being", "have", "has", "had", "do", "does", "did",
+             "will", "would", "could", "should", "may", "might", "must", "can",
+             "this", "that", "these", "those", "i", "you", "he", "she", "it",
+             "we", "they", "what", "which", "who", "when", "where", "why", "how",
+             "all", "each", "every", "both", "few", "more", "most", "other",
+             "some", "such", "no", "not", "only", "own", "same", "so", "than",
+             "too", "very", "just", "to", "of", "in", "on", "at", "by", "for",
+             "with", "about", "from", "as", "into", "through", "if", "then",
+             "there", "here", "my", "your", "their", "our", "its", "his", "her"}
